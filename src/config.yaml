@@ -11,7 +11,7 @@ metadata:
   title:
     default: Triyaa Tantric Animation Studios
     template: '%s — Triyaa'
-  description: "Triyaa Tantric Animation Studios specializes in delivering captivating 3D character animation and stunning visual effects for a variety of media, including feature films, television, game cinematics, trailers, commercials, and documentaries. Our team's dedication to creativity and innovation ensures that we bring imagination to life with every project."
+  description: "Specializing in 3D character animation, visual effects for feature films and television, game cinematics, trailers, commercials, and documentaries, Triyaa Tantric Animation Studios brings imagination to life with dedication to creativity and innovation."
   robots:
     index: true
     follow: true
