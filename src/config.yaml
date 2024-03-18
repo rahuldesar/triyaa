@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: Triyaa Tantric Animation Studios 
     images:
-      - url: '~/assets/images/og-image-v1.png'
+      - url: '~/assets/images/og-image-v2.png'
         width: 1200
         height: 628
     type: website
