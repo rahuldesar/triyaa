@@ -1,9 +1,22 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { SITE } from './utils/config';
+import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: 'Animation',
+      href: getPermalink('/animation'),
+    },
+    {
+      text: 'Rigging',
+      href: getPermalink('/rigging'),
+    },
+    {
+      text: 'Modeling',
+      href: getPermalink('/modeling'),
+    },
+    {
+      text: 'Default Pages',
       links: [
         {
           text: 'SaaS',
@@ -21,11 +34,6 @@ export const headerData = {
           text: 'Personal',
           href: getPermalink('/homes/personal'),
         },
-      ],
-    },
-    {
-      text: 'Pages',
-      links: [
         {
           text: 'Features (Anchor Link)',
           href: getPermalink('/#features'),
@@ -39,14 +47,6 @@ export const headerData = {
           href: getPermalink('/pricing'),
         },
         {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
           text: 'Terms',
           href: getPermalink('/terms'),
         },
@@ -54,11 +54,6 @@ export const headerData = {
           text: 'Privacy policy',
           href: getPermalink('/privacy'),
         },
-      ],
-    },
-    {
-      text: 'Landing',
-      links: [
         {
           text: 'Lead Generation',
           href: getPermalink('/landing/lead-generation'),
@@ -86,7 +81,7 @@ export const headerData = {
       ],
     },
     {
-      text: 'Blog',
+      text: 'Blog/Projects',
       links: [
         {
           text: 'Blog List',
@@ -110,13 +105,20 @@ export const headerData = {
         },
       ],
     },
+
     {
-      text: 'Widgets',
-      href: '#',
+      text: 'About us',
+      href: getPermalink('/about'),
+    },
+    {
+      text: 'Contact',
+      href: getPermalink('/contact'),
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  // actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
+
+let currentYear = new Date().getFullYear();
 
 export const footerData = {
   links: [
@@ -173,11 +175,15 @@ export const footerData = {
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    // { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
+    // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
-  footNote: `
+  /* footNote: `
     <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
     Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
+  `, */
+
+  footNote: `
+  ${currentYear} All rights reserved. &copy; ${SITE.name}
   `,
 };

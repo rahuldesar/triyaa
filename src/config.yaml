@@ -1,5 +1,5 @@
 site:
-  name: Triyaa Tantric Animation Studios
+  name: Triyaa
   site: 'https://preview.rahuldeshar.com.np'
   base: '/'
   trailingSlash: false
@@ -16,7 +16,7 @@ metadata:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Triyaa Tantric Animation Studios 
     images:
       - url: '~/assets/images/default.png'
         width: 1200
