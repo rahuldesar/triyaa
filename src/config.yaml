@@ -11,14 +11,14 @@ metadata:
   title:
     default: Triyaa Tantric Animation Studios
     template: '%s — Triyaa'
-  description: "\U0001F680 HELLO for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "Triyaa Tantric Animation Studios specializes in delivering captivating 3D character animation and stunning visual effects for a variety of media, including feature films, television, game cinematics, trailers, commercials, and documentaries. Our team's dedication to creativity and innovation ensures that we bring imagination to life with every project."
   robots:
     index: true
     follow: true
   openGraph:
     site_name: Triyaa Tantric Animation Studios 
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/og-image-v1.png'
         width: 1200
         height: 628
     type: website
