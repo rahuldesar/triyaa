@@ -1,0 +1,24 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Triyaa | Animation',
+};
+---
+
+<Layout metadata={metadata}>
+  <CallToAction
+    title="Coming soon"
+    subtitle="We are working on the content of these Animation pages. You will see them very soon. Stay tuned Stay tuned!"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Go to Homepage',
+        href: '/',
+      },
+    ]}
+  />
+</Layout>
