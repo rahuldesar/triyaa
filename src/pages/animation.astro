@@ -3,16 +3,17 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Temp from '~/components/widgets/Temp.astro';
 
 const metadata = {
-  title: 'Triyaa | Animation',
+  title: 'Animation',
 };
 ---
 
 <Layout metadata={metadata}>
   <CallToAction
-    title="Coming soon"
-    subtitle="We are working on the content of these Animation pages. You will see them very soon. Stay tuned Stay tuned!"
+    title="TODO: "
+    subtitle="Slider"
     actions={[
       {
         variant: 'primary',
@@ -21,4 +22,22 @@ const metadata = {
       },
     ]}
   />
+
+  <section class="container mx-auto mb-4 md:mb-8">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi autem atque nam, eaque labore itaque numquam
+      veritatis architecto cupiditate debitis ea unde rerum suscipit beatae voluptates quo perferendis omnis dicta.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi illo officia officiis saepe libero sapiente minus
+      et, consectetur ab iusto! Similique modi veritatis incidunt placeat voluptatum ab deleniti! Quas, nulla.
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi illo officia officiis saepe libero sapiente minus
+      et, consectetur ab iusto! Similique modi veritatis incidunt placeat voluptatum ab deleniti! Quas, nulla.
+    </p>
+  </section>
+
+  <div class="mb-4 md:mb-8">
+    <Temp />
+  </div>
 </Layout>

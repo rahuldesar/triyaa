@@ -1,0 +1,33 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Careers',
+};
+---
+
+<Layout metadata={metadata}>
+  <main class="container mx-auto px-4 py-8">
+    <h2 class="text-2xl font-bold mb-4">Join Our Team</h2>
+    <p class="mb-8">Explore exciting opportunities to work with us.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="border border-gray-100 p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold mb-2">Software Engineer</h3>
+        <p class="mb-4">We're looking for talented software engineers to join our dynamic team.</p>
+        <a href="#" class="hover:underline">Learn More</a>
+      </div>
+
+      <div class="border border-gray-100 p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold mb-2">Marketing Manager</h3>
+        <p class="mb-4">Join us in shaping our brand and reaching new audiences.</p>
+        <a href="#" class="hover:underline">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Add more career opportunity cards here -->
+  </main>
+</Layout>
