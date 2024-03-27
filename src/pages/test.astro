@@ -11,6 +11,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Temp from '~/components/widgets/Temp.astro';
 
 const metadata = {
   title: 'Triyaa Tantric Animation Studios',
@@ -19,54 +20,11 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
-  <!-- <Hero -->
-  <!--   actions={[ -->
-  <!--     { -->
-  <!--       variant: 'primary', -->
-  <!--       text: 'Get template', -->
-  <!--       href: 'https://github.com/onwidget/astrowind', -->
-  <!--       target: '_blank', -->
-  <!--       icon: 'tabler:download', -->
-  <!--     }, -->
-  <!--     { text: 'Learn more', href: '#features' }, -->
-  <!--   ]}  -->
-  <!--   image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }} -->
-  <!-- > -->
-
-  <Hero image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}>
-    <Fragment slot="title">
-      <span class="text-accent dark:text-white highlight">Triyaa Tantric Animation Studios</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline" transition:animate="slide">
-        We specialize in
-        <span class="font-semibold">3D character Animation</span>
-        crafting mesmerizing
-        <span class="font-semibold">visual effects</span>
-        for feature films and television. 3D character animation, crafting mesmerizing visual effects for feature films and
-        television. From
-        <span class="font-semibold"> game cinematics</span>
-        to trailers, commercials, documentaries, and beyond, we bring imagination to life.
-      </span>
-      <!-- <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span> -->
-    </Fragment>
-  </Hero>
-
-  <!-- Note Widget ******************* -->
-
-  <Note />
-
-  <!-- Features Widget *************** -->
-
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <Temp />
 
   <Features
     id="features"
-    tagline="Features"
+    tagline="Feature Block 1"
     title="What you get with AstroWind"
     subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
     items={[
@@ -113,7 +71,7 @@ const metadata = {
 
   <Content
     isReversed
-    tagline="Inside template"
+    tagline="CONTENT BLOCK 1"
     title="AstroWind's Blueprint: Fun Meets Functionality!"
     items={[
       {
@@ -224,7 +182,7 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="Steps Widget : Get your dream website up and running in no time with AstroWind."
     items={[
       {
         title: 'Step 1: <span class="font-medium">Download</span>',
@@ -258,7 +216,7 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
+    title="Feature 2 Widget: Most used widgets"
     subtitle="Provides frequently used components for building websites using Tailwind CSS"
     tagline="Components"
     items={[
@@ -322,7 +280,7 @@ const metadata = {
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
-    title="Find out more content in our Blog"
+    title="BlogLatestPosts: Find out more content in our Blog"
     information={`The blog is used to display AstroWind documentation.
                         Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
                         Astro is a very interesting technology. Thanks.
@@ -387,7 +345,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
+        text: 'CTA widget: Get template',
         href: 'https://github.com/onwidget/astrowind',
         target: '_blank',
         icon: 'tabler:download',
