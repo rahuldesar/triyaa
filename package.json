@@ -10,7 +10,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
-    "lint:eslint": "eslint . --ext .js,.ts,.astro"
+    "lint:eslint": "eslint . --ext .js,.ts,.astro",
+     "proxy": "npx netlify-cms-proxy-server"
+
   },
   "dependencies": {
     "@astrojs/react": "^3.1.0",
