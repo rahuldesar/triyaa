@@ -2,7 +2,6 @@ backend:
   name: github
   repo: rahuldesar/triyaa
 
-
 local_backend:
   url: http://localhost:8081/api/v1
 
