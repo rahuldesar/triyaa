@@ -15,6 +15,10 @@ export const headerData = {
       text: 'Modeling',
       href: getPermalink('/modeling'),
     },
+    {
+      text: 'Art',
+      href: getPermalink('/art'),
+    },
     // {
     //   text: 'Default Pages',
     //   links: [
@@ -128,7 +132,7 @@ let currentYear = new Date().getFullYear();
 export const footerData = {
   links: [
     {
-      title: 'Projects',
+      title: 'Projecs',
       links: [
         { text: 'Projects 1 ', href: '#' },
         { text: 'Projects 2 ', href: '#' },
