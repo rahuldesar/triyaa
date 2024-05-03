@@ -17,10 +17,33 @@ const metadata = {
   title: 'Triyaa Tantric Animation Studios',
   ignoreTitleTemplate: true,
 };
+
+const images = [
+  {
+    src: 'https://incessantrain.com/public/storage/media/image/1/Anime/trolls-min.jpg',
+    alt: 'Trolls',
+    videoId: 'Sfz9jQ3KI5k',
+  },
+  {
+    src: 'https://incessantrain.com/public/storage/media/image/1/Anime/hotweels-min.jpg',
+    alt: 'TEAM HOTWHEELS',
+    videoId: 'Z5NoQg8LdDk',
+  },
+  {
+    src: 'https://incessantrain.com/public/storage/media/image/1/307647941_102674609276009_2149601038728533595_n.jpg',
+    alt: 'GURKHAS VS NINJAS',
+    videoId: 'dQw4w9WgXcQ',
+  },
+  {
+    src: 'https://incessantrain.com/public/storage/media/image/1/Anime/cars-animation-min.jpg',
+    alt: 'LEGO CARS',
+    videoId: 'u5CVsCnxyXg',
+  },
+];
 ---
 
 <Layout metadata={metadata}>
-  <CardsBlock />
+  <CardsBlock images={images} />
 
   <Features
     id="features"
