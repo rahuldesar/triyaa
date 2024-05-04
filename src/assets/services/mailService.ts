@@ -1,19 +1,19 @@
-// import nodemailer from 'nodemailer';
-//
-// export const transporter = nodemailer.createTransport({
-//   service: 'Gmail',
-//   host: 'smtp.gmail.com',
-//   port: 465,
-//   secure: true,
-//   auth: {
-//     user: 'vadernotifier@gmail.com',
-//     pass: 'gwbvhwpniyyhljgr',
-//   },
-// });
-//
+import nodemailer from 'nodemailer';
+
+export const transporter = nodemailer.createTransport({
+  service: 'Gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+    user: 'vadernotifier@gmail.com',
+    pass: 'gwbvhwpniyyhljgr',
+  },
+});
+
 // const mailOptions = {
 //   from: 'vadernotifier@gmail.com',
-//   to: 'desarrahul@gmailecom',
+//   to: 'desarrahul@gmail.com',
 //   subject: 'Hello from Nodemailer',
 //   text: 'This is a test email sent using Nodemailer.',
 // };

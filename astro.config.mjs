@@ -86,4 +86,3 @@ export default defineConfig({
   },
   adapter: netlify(), //might have to change this later
 });
-

@@ -1,39 +1,22 @@
 export const prerender = false;
 
-import nodemailer from 'nodemailer';
-export async function GET() {
-  const transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-      user: 'vadernotifier@gmail.com',
-      pass: 'gwbvhwpniyyhljgr',
-    },
-  });
+export async function POST({ request }) {
+  const data = await request.formData();
+  const name = data.get('name');
+  const email = data.get('email');
+  const message = data.get('message');
 
-  const mailOptions = {
-    from: 'vadernotifier@gmail.com',
-    to: 'pabeh14567@dxice.com',
-    subject: 'Hello from Nodemailer',
-    text: 'This is a test email sent using Nodemailer.',
-  };
+  console.table({ name, email, message });
+  console.log(data);
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error('Error sending email: ', error);
-    } else {
-      console.log('Email sent: ', info.response);
-    }
-  });
-
-  const number = Math.random();
+  // Validate the data - you'll probably want to do more than this
 
   return new Response(
     JSON.stringify({
-      number,
-      message: `Here's a random number: ${number}`,
-    })
+      message: 'Your name was: ' + name,
+    }),
+    {
+      status: 200,
+    }
   );
 }
