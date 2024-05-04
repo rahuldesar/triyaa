@@ -6,10 +6,6 @@ export async function POST({ request }) {
   const email = data.get('email');
   const message = data.get('message');
 
-  console.table({ name, email, message });
-  console.log(data);
-
-  // Validate the data - you'll probably want to do more than this
 
   return new Response(
     JSON.stringify({
