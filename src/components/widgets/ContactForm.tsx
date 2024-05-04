@@ -5,9 +5,9 @@ import { useState } from 'react';
 export interface ContactProps {
   title: string;
   subtitle: string;
-  inputs: { type: string; name: string; label: string; required?: boolean; placeholder?: string }[];
-  textarea: { label: string };
-  disclaimer: { label: string };
+  inputs?: { type: string; name: string; label: string; required?: boolean; placeholder?: string }[];
+  textarea?: { label: string };
+  disclaimer?: { label: string };
   description: string;
 }
 
@@ -17,7 +17,7 @@ interface ContactFormData {
   message: string;
 }
 
-const ContactForm: React.FC<ContactProps> = ({ title, subtitle, inputs, textarea, disclaimer, description }) => {
+const ContactForm: React.FC<ContactProps> = ({ title, subtitle, description }) => {
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
@@ -34,14 +34,13 @@ const ContactForm: React.FC<ContactProps> = ({ title, subtitle, inputs, textarea
     });
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     setIsSubmitting(true);
-    axios
+    await axios
       .post('/api/api-test', {
         data: formData,
-        headers: { 'Content-Type': 'multipart/form-data' },
       })
       .then(function (response) {
         if (response.status === 200) {
@@ -56,7 +55,7 @@ const ContactForm: React.FC<ContactProps> = ({ title, subtitle, inputs, textarea
 
     setTimeout(() => {
       setIsMessageSent(false);
-    }, 2000);
+    }, 3000);
   };
 
   return (

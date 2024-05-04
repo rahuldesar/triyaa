@@ -269,23 +269,29 @@ export async function POST({ request }) {
 
       `,
     };
-
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-        console.error('Error sending email: ', error);
+        console.error(error);
+        return new Response(
+          JSON.stringify({
+            error: 'An error occurred while sending the email.',
+          }),
+          {
+            status: 500,
+          }
+        );
       } else {
-        console.log('Email sent: ', info.response);
+        return new Response(
+          JSON.stringify({
+            message: 'Your contact form was submitted successfully!',
+            info: info.response,
+          }),
+          {
+            status: 200,
+          }
+        );
       }
     });
-
-    return new Response(
-      JSON.stringify({
-        message: 'Your contact form was submitted successfully!',
-      }),
-      {
-        status: 200,
-      }
-    );
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);
@@ -293,7 +299,7 @@ export async function POST({ request }) {
 
     return new Response(
       JSON.stringify({
-        error: 'An error occurred while processing your request.',
+        error: 'An error occurred while processing your request.' + error,
       }),
       {
         status: 500,
