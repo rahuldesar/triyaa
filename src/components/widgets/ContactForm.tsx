@@ -45,6 +45,11 @@ const ContactForm: React.FC<ContactProps> = ({ title, subtitle, description }) =
       .then(function (response) {
         if (response.status === 200) {
           setIsMessageSent(true);
+          setFormData({
+            name: '',
+            email: '',
+            message: '',
+          });
         }
         setIsSubmitting(false);
       })
