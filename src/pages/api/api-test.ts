@@ -269,32 +269,22 @@ export async function POST({ request }) {
 
       `,
     };
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.error(error);
-        return new Response(
-          JSON.stringify({
-            error: 'An error occurred while sending the email.',
-          }),
-          {
-            status: 500,
-          }
-        );
-      } else {
-        return new Response(
-          JSON.stringify({
-            message: 'Your contact form was submitted successfully!',
-            info: info.response,
-          }),
-          {
-            status: 200,
-          }
-        );
+
+    const mailResponse = await transporter.sendMail(mailOptions);
+
+    console.log('Message sent successfully', mailResponse.response);
+
+    return new Response(
+      JSON.stringify({
+        message: 'Your contact form was submitted successfully!',
+      }),
+      {
+        status: 200,
       }
-    });
+    );
   } catch (error) {
     if (error instanceof Error) {
-      console.error(error.message);
+      console.error(error);
     }
 
     return new Response(
