@@ -25,6 +25,7 @@ export default defineConfig({
   site: SITE.site,
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
+  // output: 'static',
   output: 'hybrid',
   integrations: [
     tailwind({
@@ -84,5 +85,6 @@ export default defineConfig({
       },
     },
   },
-  adapter: netlify(), //might have to change this later
+  // comment this to preview in localmachine
+  adapter: netlify(), //might have to change this later, `use node` if site isn't deployed in netlify free tier anymore
 });
