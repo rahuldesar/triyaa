@@ -37,7 +37,7 @@ apps:
     postsPerPage: 6
 
     post:
-      isEnabled: false
+      isEnabled: true
       permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       robots:
         index: true

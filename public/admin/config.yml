@@ -1,5 +1,6 @@
 backend:
   name: github
+  # when changing this remember to add Oauth credentials on netlify
   repo: rahuldesar/triyaa
 
 local_backend:
@@ -9,6 +10,155 @@ media_folder: 'src/assets/images'
 public_folder: 'src/assets/images'
 
 collections:
+  - name: 'Homepage'
+    label: 'Homepage'
+    # INFO: Images stored in `/public`, because images stored in /assets isn't being shown after building, (image src from
+    # frontmatter only, `assets` works for md body though)
+    media_folder: "../../../public/images/"  
+    public_folder: '/images'
+    folder: 'src/content/decap_statics'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - name: 'cta'
+        label: 'Who We are '
+        widget: 'object'
+        collapsed: true
+        fields:
+          - name: 'Heading'
+            label: 'heading'
+            widget: 'string'
+          - name: 'description'
+            label: 'Description'
+            widget: 'string'
+          - name: 'button'
+            label: 'button'
+            widget: 'object'
+            fields:
+              - name: 'text'
+                label: 'CTA Text'
+                widget: 'string'
+                required: true
+              - name: 'link'
+                label: 'Link'
+                widget: 'string'
+                required: false
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        summary: '{{fields.name}}: {{fields.birthdate}}'
+        fields:
+          - {label: "alt", name: "alt", widget: "string"}
+          - label: "IMAGE WIDGET"
+            name: "src"
+            widget: "image"
+            choose_url: false
+          - {label: "Youtube Video Id", name: "videoId", widget: "string"}
+
+  - name: 'Homepage2'
+    label: 'Testing'
+    folder: 'src/content/decap_statics'
+    fields:
+      - { label: 'String Widget', name: 'title', widget: 'string' }
+      - {label: "BOOLEAN ", name: "draft", widget: "boolean", default: true}
+      - label: 'Code'
+        name: 'code'
+        widget: 'code'
+      - { label: 'Color', name: 'color', widget: 'color' }
+      - label: "DATE TIME"
+        name: "start"
+        widget: "datetime"
+        default: ""
+        date_format: "DD.MM.YYYY" # e.g. 24.12.2021
+        time_format: "HH:mm" # e.g. 21:07
+        format: "LLL"
+        picker_utc: false
+      - label: "FILE"
+        name: "manual_pdf"
+        widget: "file"
+        default: "/uploads/general-manual.pdf"
+        media_library:
+          config:
+            multiple: true
+      - label: "IMAGE WIDGET"
+        name: "thumbnail"
+        widget: "image"
+        choose_url: true
+        default: "/uploads/chocolate-dogecoin.jpg"
+        media_library:
+          config:
+            multiple: true
+      - label: "LIST WIDGET"
+        name: "tags"
+        widget: "list"
+        default: ["news"]
+      - {label: "MAP WIDGET", name: "location", widget: "map" }
+      - { label: 'MARKDOWN WIDGET', name: 'body', widget: 'markdown' }
+      - label: "NUMBER WIDGET"
+        name: "puppies"
+        widget: "number"
+        default: 2
+        value_type: "int"
+        min: 1
+        max: 101
+        step: 2
+      - label: "OBJECT WIDGET"
+        name: "profile"
+        widget: "object"
+        summary: '{{fields.name}}: {{fields.birthdate}}'
+        fields:
+          - {label: "Public", name: "public", widget: "boolean", default: true}
+          - {label: "Name", name: "name", widget: "string"}
+          - label: "Birthdate"
+            name: "birthdate"
+            widget: "date"
+            default: ""
+            format: "MM/DD/YYYY"
+          - label: "Address"
+            name: "address"
+            widget: "object"
+            collapsed: true
+            fields: 
+              - {label: "Street Address", name: "street", widget: "string"}
+              - {label: "City", name: "city", widget: "string"}
+              - {label: "Postal Code", name: "post-code", widget: "string"}
+      - label: "RELATION WIDGET"
+        name: "author"
+        widget: "relation"
+        collection: "authors"
+        search_fields: ["name.first", "twitterHandle"]
+        value_field: "name.first"
+        display_fields: ["twitterHandle", "followerCount"]
+      - label: "SELECT WIDGET"
+        name: "align"
+        widget: "select"
+        options: ["left", "center", "right"]
+      - {label: "STRING WIDGET", name: "titlee", widget: "string"}
+      - {label: "TEXT WIDGET", name: "description", widget: "text"}
+      - label: 'VARIABLE TYPE WIDGET'
+        name: 'sections'
+        widget: 'list'
+        types:
+          - label: 'Carousel'
+            name: 'carousel'
+            widget: object
+            summary: '{{fields.header}}'
+            fields:
+              - { label: Header, name: header, widget: string, default: 'Image Gallery' }
+              - { label: Template, name: template, widget: string, default: 'carousel.html' }
+              - label: Images
+                name: images
+                widget: list
+                field: { label: Image, name: image, widget: image }
+          - label: 'Spotlight'
+            name: 'spotlight'
+            widget: object
+            fields:
+              - { label: Header, name: header, widget: string, default: 'Spotlight' }
+              - { label: Template, name: template, widget: string, default: 'spotlight.html' }
+              - { label: Text, name: text, widget: text, default: 'Hello World' }
+
+
+
   - name: 'post'
     label: 'Post'
     folder: 'src/content/post'

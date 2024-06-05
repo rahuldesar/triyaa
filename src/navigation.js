@@ -4,20 +4,29 @@ import { getPermalink, getBlogPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Animation',
-      href: getPermalink('/animation'),
+      text: 'In House Productions',
+      links: [
+        {
+          text: 'Gaming',
+          href: getPermalink('/inhouse/gaming'),
+        },
+        {
+          text: 'Videos',
+          href: getPermalink('/inhouse/videos'),
+        },
+        {
+          text: 'Animated Series',
+          href: getPermalink('/inhouse/animated-series'),
+        },
+      ],
     },
     {
-      text: 'Rigging',
-      href: getPermalink('/rigging'),
+      text: 'Our Clients',
+      href: getPermalink('/our-clients'),
     },
     {
-      text: 'Modeling',
-      href: getPermalink('/modeling'),
-    },
-    {
-      text: 'Art',
-      href: getPermalink('/art'),
+      text: 'Products',
+      href: getPermalink('/products'),
     },
     // {
     //   text: 'Default Pages',
@@ -84,41 +93,31 @@ export const headerData = {
     //     },
     //   ],
     // },
-    // {
-    //   text: 'Blog/Projects',
-    //   links: [
-    //     {
-    //       text: 'Blog List',
-    //       href: getBlogPermalink(),
-    //     },
-    //     {
-    //       text: 'Article',
-    //       href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-    //     },
-    //     {
-    //       text: 'Article (with MDX)',
-    //       href: getPermalink('markdown-elements-demo-post', 'post'),
-    //     },
-    //     {
-    //       text: 'Category Page',
-    //       href: getPermalink('tutorials', 'category'),
-    //     },
-    //     {
-    //       text: 'Tag Page',
-    //       href: getPermalink('astro', 'tag'),
-    //     },
-    //   ],
-    // },
-
-    {
-      text: 'Careers',
-      href: getPermalink('/careers'),
-    },
-    {
-      text: 'About us',
-      href: getPermalink('/about'),
-    },
-
+    /* {
+      text: 'Blog/Projects',
+      links: [
+        {
+          text: 'Blog List',
+          href: getBlogPermalink(),
+        },
+        {
+          text: 'Article',
+          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+        },
+        {
+          text: 'Article (with MDX)',
+          href: getPermalink('markdown-elements-demo-post', 'post'),
+        },
+        {
+          text: 'Category Page',
+          href: getPermalink('tutorials', 'category'),
+        },
+        {
+          text: 'Tag Page',
+          href: getPermalink('astro', 'tag'),
+        },
+      ],
+    }, */
     {
       text: 'Contact',
       href: getPermalink('/contact'),
@@ -152,8 +151,8 @@ export const footerData = {
     {
       title: 'Quick Links',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'About Us', href: '/about-us' },
+        { text: 'Careers', href: '/careers' },
       ],
     },
     {
