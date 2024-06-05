@@ -9,8 +9,9 @@ cta:
   button:
     text: See our Projects
     link: /animation
+  Heading: Homepage
 images:
-  - src: /images/wp2705478-alex-grey-backgrounds-desktop.jpg
+  - src: /images/abstract-nord.png
     alt: GURKHAS VS NINJAS
     videoId: dQw4w9WgXcQ
   - src: https://incessantrain.com/public/storage/media/image/1/Anime/trolls-min.jpg
