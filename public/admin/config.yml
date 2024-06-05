@@ -10,49 +10,92 @@ media_folder: 'src/assets/images'
 public_folder: '~/assets/images'
 
 collections:
-  - name: 'Homepage'
-    label: 'Homepage'
+  - name: 'pages'
+    label: 'Pages'
     # INFO: Images stored in `/public`, because images stored in /assets isn't being shown after building, (image src from
     # frontmatter only, `assets` works for md body though)
-    media_folder: "../../../public/images/"  
-    public_folder: '/images'
-    folder: 'src/content/decap_statics'
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - name: 'cta'
-        label: 'Who We are '
-        widget: 'object'
-        collapsed: true
+    files:
+      - label: "Homepage Contents"
+        name: "homepage"
+        file: "src/content/decap_statics/homepage.md"
+        media_folder: "../../../public/images/"  
+        public_folder: '/images'
         fields:
-          - name: 'Heading'
-            label: 'heading'
-            widget: 'string'
-          - name: 'description'
-            label: 'Description'
-            widget: 'string'
-          - name: 'button'
-            label: 'button'
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - name: 'cta'
+            label: 'Who We are '
             widget: 'object'
+            collapsed: true
             fields:
-              - name: 'text'
-                label: 'CTA Text'
+              - name: 'heading'
+                label: 'Heading'
                 widget: 'string'
-                required: true
-              - name: 'link'
-                label: 'Link'
+              - name: 'description'
+                label: 'Description'
                 widget: 'string'
-                required: false
-      - label: "Images"
-        name: "images"
-        widget: "list"
-        summary: '{{fields.name}}: {{fields.birthdate}}'
+              - name: 'button'
+                label: 'button'
+                widget: 'object'
+                fields:
+                  - name: 'text'
+                    label: 'CTA Text'
+                    widget: 'string'
+                    required: true
+                  - name: 'link'
+                    label: 'Link'
+                    widget: 'string'
+                    required: false
+          - label: "Slider Images"
+            name: "slides"
+            widget: "list"
+            summary: '{{fields.alt}}'
+            fields:
+              - label: "Image"
+                name: "src"
+                widget: "image"
+                choose_url: true
+              - {label: "Image short description", name: "alt", widget: "string"}
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            fields:
+              - {label: "Image short description", name: "alt", widget: "string"}
+              - label: "Image"
+                name: "src"
+                widget: "image"
+                choose_url: true
+              - {label: "Youtube Video Id", name: "videoId", widget: "string", hint: " HELPER: **`dQw4w9WgXcQ`** in https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
+
+      - label: "Clients"
+        name: "clients"
+        file: "src/content/decap_statics/clients.md"
+        media_folder: "../../../public/images/"  
+        public_folder: '/images'
         fields:
-          - {label: "alt", name: "alt", widget: "string"}
-          - label: "IMAGE WIDGET"
-            name: "src"
-            widget: "image"
-            choose_url: false
-          - {label: "Youtube Video Id", name: "videoId", widget: "string"}
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Summary', name: 'summary', widget: 'string' }
+          - label: "Client List"
+            name: "clients"
+            widget: "list"
+            summary: '{{fields.photo.alt}}'
+            fields:
+              - name: 'photo'
+                label: 'Photos'
+                widget: 'object'
+                collapsed: true
+                fields:
+                  - label: "Image"
+                    name: "src"
+                    widget: "image"
+                    choose_url: true
+                  - {label: "Client short description", name: "alt", widget: "string"}
+              - name: 'description'
+                label: 'Description'
+                widget: 'string'
+              - name: 'externalLink'
+                label: 'External Link'
+                widget: 'string'
+              - {label: "Youtube Video Id", name: "youtubeId", widget: "string", hint: " HELPER: **`dQw4w9WgXcQ`** in https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
 
   - name: 'Homepage2'
     label: 'Testing'

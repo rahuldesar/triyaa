@@ -9,7 +9,6 @@ cta:
   button:
     text: See our Projects
     link: /animation
-  Heading: Homepage
 images:
   - src: /images/abstract-nord.png
     alt: GURKHAS VS NINJAS
