@@ -23,10 +23,10 @@ Iaculis arcu commodo dis proin vitae himenaeos, ante tristique potenti magna lig
 
 ## Praesent tellus ad sapien erat or
 
-* Quam orci nostra mi nulla, hac a.
-* Interdum iaculis quis tellus sociis orci nulla, quam rutrum conubia tortor primis.
-* Non felis sem placerat aenean duis, ornare turpis nostra.
-* Habitasse duis sociis sagittis cursus, ante dictumst commodo.
+- Quam orci nostra mi nulla, hac a.
+- Interdum iaculis quis tellus sociis orci nulla, quam rutrum conubia tortor primis.
+- Non felis sem placerat aenean duis, ornare turpis nostra.
+- Habitasse duis sociis sagittis cursus, ante dictumst commodo.
 
 Duis maecenas massa habitasse inceptos imperdiet scelerisque at condimentum ultrices, nam dui leo enim taciti varius cras habitant pretium rhoncus, ut hac euismod nostra metus sagittis mi aenean. Quam eleifend aliquet litora eget a tempor, ultricies integer vestibulum non felis sodales, eros diam massa libero iaculis.
 
@@ -50,4 +50,4 @@ Hendrerit taciti litora nec facilisis diam vehicula magnis potenti, parturient v
 
 hello
 
-![](src/assets/images/wp2705391-alex-grey-backgrounds-desktop.jpg)
+![](~/src/assets/images/wp2705391-alex-grey-backgrounds-desktop.jpg)
