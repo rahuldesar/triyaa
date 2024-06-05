@@ -50,4 +50,4 @@ Hendrerit taciti litora nec facilisis diam vehicula magnis potenti, parturient v
 
 hello
 
-![](~/src/assets/images/wp2705391-alex-grey-backgrounds-desktop.jpg)
+![](~/assets/images/wp2705391-alex-grey-backgrounds-desktop.jpg)
