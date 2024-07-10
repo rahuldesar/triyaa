@@ -182,7 +182,7 @@ const ProjectsDetailCarousel = () => {
       >
         {projectDetails.map((item, index) => (
           <SwiperSlide
-            className={`h-[11.625rem] overflow-hidden border-2 border-slate-200 active:border-red-800 ${index === currentActiveSlideIndex ? 'border-accent border-4' : ''}`}
+            className={`h-[11.625rem] overflow-hidden   ${index === currentActiveSlideIndex ? 'border-accent border-4' : 'border-2 border-slate-200'}`}
             key={`thumb-${item.projectInfo.image.src}-${index}`}
           >
             <img
