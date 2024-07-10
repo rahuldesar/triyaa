@@ -5,6 +5,7 @@ import * as homepageData from '~/content/decap_statics/homepage.md';
 // import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import CollectionGrid from '~/components/ui/CollectionGrid.astro';
 
 import Carousel, { type SlideProp } from '~/components/common/Carousel';
 import CardsBlock, { type ImageData } from '~/components/widgets/CardsBlock.astro';
@@ -29,33 +30,18 @@ let cta = homepageData.frontmatter.cta as CTA;
 ---
 
 <Layout metadata={metadata}>
-  <Carousel client:load slides={slides} />
+  {slides.length ? <Carousel client:load slides={slides} /> : null}
 
-  <!-- 
-  INFO: HERO SECTION REMOVED
+  <Features2
+    title="Who are we"
+    subtitle="We are an animation studio founded by artists and filmmakers who believe that every creative project starts with a great idea. We bring our love of craft and storytelling to everything we do, from advertising and interactive to music videos and original content."
+  />
 
-    <div class="mt-30">
-    <Hero image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}>
-      <Fragment slot="title">
-        <span class="text-accent dark:text-white highlight">Triyaa Animation studios</span>
-      </Fragment>
+  <div class="container mx-auto">
+    <CollectionGrid />
+  </div>
 
-      <Fragment slot="subtitle">
-        <span class="hidden sm:inline">
-          We specialize in
-          <span class="font-semibold">3D character Animation</span>
-          crafting mesmerizing
-          <span class="font-semibold">visual effects</span>
-          for feature films and television. 3D character animation, crafting mesmerizing visual effects for feature films
-          and television. From
-          <span class="font-semibold"> game cinematics</span>
-          to trailers, commercials, documentaries, and beyond, we bring imagination to life.
-        </span>
-      </Fragment>
-    </Hero>
-  </div> 
-  -->
-
+  <!-- TODO: @Rahul : Improve Design for this-->
   <CallToAction
     title={cta.heading}
     subtitle={cta.description}
@@ -70,8 +56,11 @@ let cta = homepageData.frontmatter.cta as CTA;
 
   <!-- Masonry Block 1 -->
   <div class="mb-4 md:mb-8">
+    <h2 class="text-2xl text-center font-bold lg:text-3xl mb-4">Showcase</h2>
     <CardsBlock images={images} />
   </div>
+
+  <!-- 
 
   <Features2
     title="Contact us"
@@ -92,5 +81,6 @@ let cta = homepageData.frontmatter.cta as CTA;
         icon: 'tabler:map-pin',
       },
     ]}
-  />
+    />
+ -->
 </Layout>

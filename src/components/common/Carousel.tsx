@@ -19,7 +19,7 @@ export default function Carousel({ slides }: { slides: SlideProp[] }) {
         autoplay={{
           delay: 3500,
           // pauseOnMouseEnter: true,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }}
         loop={true}
         effect={'fade'}
@@ -33,8 +33,8 @@ export default function Carousel({ slides }: { slides: SlideProp[] }) {
         modules={[Autoplay, Mousewheel, EffectFade, Scrollbar]}
         className="mySwiper mb-8 h-[15.625rem] sm:h-[40.75rem]"
       >
-        {slides.map((slide) => (
-          <SwiperSlide>
+        {slides.map((slide, index) => (
+          <SwiperSlide key={`slide-${index}`}>
             <img src={slide.src} className="h-full w-full object-cover " alt={slide.alt} />
           </SwiperSlide>
         ))}

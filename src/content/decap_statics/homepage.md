@@ -1,14 +1,14 @@
 ---
 title: Homepage
 cta:
-  heading: Who we are
-  description: We are an animation studio founded by artists and filmmakers who
+  heading: Interested in working with us
+  description: " -- TODO: BETTER LAYOUT -- We are an animation studio founded by artists and filmmakers who
     believe that every creative project starts with a great idea. We bring our
     love of craft and storytelling to everything we do, from advertising and
-    interactive to music videos and original content.
+    interactive to music videos and original content."
   button:
-    text: See our Projects
-    link: /animation
+    text: Work with us
+    link: /contact
 images:
   - src: /images/abstract-nord.png
     alt: GURKHAS VS NINJAS
