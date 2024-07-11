@@ -124,24 +124,24 @@ const ProjectsDetailCarousel = () => {
   return (
     <div className="themes-carousel" ref={projectContentRef}>
       <div>
-        <div className="px-4 py-12 flex flex-col ring-1 rounded-md">
-          <div className="lg:w-5/6 mx-auto">
-            <div className="flex flex-col sm:flex-row my-">
-              <div className="sm:w-1/3 text-center px-8">
+        <div className="flex flex-col rounded-md px-4 py-12 ring-1">
+          <div className="mx-auto lg:w-5/6">
+            <div className="my- flex flex-col sm:flex-row">
+              <div className="px-8 text-center sm:w-1/3">
                 <img
                   alt="project-thumbnail"
-                  className="object-cover object-center h-full w-full"
+                  className="h-full w-full object-cover object-center"
                   src={currentProject.projectInfo.image.src}
                 />
               </div>
-              <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-                <p className="leading-relaxed text-lg mb-4">{currentProject.projectInfo.description}</p>
+              <div className="mt-4 border-t border-gray-200 pt-4 text-center sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left">
+                <p className="mb-4 text-lg leading-relaxed">{currentProject.projectInfo.description}</p>
               </div>
             </div>
-            <div className="rounded-lg h-96 overflow-hidden my-8">
-              <div className="relative w-full h-full">
+            <div className="my-8 h-96 overflow-hidden rounded-lg">
+              <div className="relative h-full w-full">
                 <iframe
-                  className="absolute top-0 left-0 w-full h-full"
+                  className="absolute left-0 top-0 h-full w-full"
                   src={`https://www.youtube.com/embed/${currentProject.projectInfo.video.src}`}
                   title="YouTube Embed Video"
                   allowFullScreen
@@ -182,7 +182,7 @@ const ProjectsDetailCarousel = () => {
       >
         {projectDetails.map((item, index) => (
           <SwiperSlide
-            className={`h-[11.625rem] overflow-hidden   ${index === currentActiveSlideIndex ? 'border-accent border-4' : 'border-2 border-slate-200'}`}
+            className={`h-[11.625rem] overflow-hidden ${index === currentActiveSlideIndex ? 'border-4 border-accent' : 'border-2 border-slate-200'}`}
             key={`thumb-${item.projectInfo.image.src}-${index}`}
           >
             <img

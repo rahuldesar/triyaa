@@ -44,12 +44,12 @@ const metadata = {
     id="hero"
     title="Sarah Johnson"
     tagline="Personal Web Demo"
-    actions={[{ variant: "primary", target: '_blank', text: 'Hire me', href: '/' }]}
+    actions={[{ variant: 'primary', target: '_blank', text: 'Hire me', href: '/' }]}
   >
     <Fragment slot="subtitle">
-      I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree
-      from New York University's School of Design. I infuse vitality into brands and designs, transforming concepts into
-      captivating realities.
+      I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree from
+      New York University's School of Design. I infuse vitality into brands and designs, transforming concepts into captivating
+      realities.
     </Fragment>
   </Hero>
 
@@ -91,7 +91,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <h2 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">About me</h2>
       <p>
         Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
         pixel becomes a brushstroke in the canvas of imagination.
@@ -228,7 +228,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">
         Project 1: <br /><span class="text-2xl">Brand identity for tech innovators</span>
       </h3>
     </Fragment>
@@ -266,7 +266,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">
         Project 2: <br /><span class="text-2xl">Event poster for art & music festival</span>
       </h3>
     </Fragment>
@@ -303,7 +303,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">
         Project 3: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
       </h3>
     </Fragment>
@@ -381,11 +381,13 @@ const metadata = {
   <CallToAction
     title="Let's create together"
     subtitle="Ready to transform your vision into captivating designs?"
-    actions={[{
-      variant:"primary",
-      text: 'Hire me',
-      href: '/',
-    }]}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Hire me',
+        href: '/',
+      },
+    ]}
   />
 
   <!-- BlogLatestPost Widget **************** -->

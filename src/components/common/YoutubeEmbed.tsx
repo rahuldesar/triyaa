@@ -22,14 +22,14 @@ const YouTubeModal = ({ videoId, children }) => {
       </button>
       {isOpen && (
         <div
-          className="fixed inset-0 h-full flex items-center justify-center z-50 bg-black bg-opacity-75"
+          className="fixed inset-0 z-50 flex h-full items-center justify-center bg-black bg-opacity-75"
           onClick={closeModal}
         >
-          <div className="relative w-11/12 max-w-6xl h-auto">
+          <div className="relative h-auto w-11/12 max-w-6xl">
             <div className="bg-white p-6">
               <div className="aspect-video">
                 <iframe
-                  className="absolute inset-0 w-full h-full"
+                  className="absolute inset-0 h-full w-full"
                   src={`https://www.youtube.com/embed/${videoId}`}
                   title="YouTube Embed Video"
                   allowFullScreen

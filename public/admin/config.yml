@@ -15,10 +15,10 @@ collections:
     # INFO: Images stored in `/public`, because images stored in /assets isn't being shown after building, (image src from
     # frontmatter only, `assets` works for md body though)
     files:
-      - label: "Homepage Contents"
-        name: "homepage"
-        file: "src/content/decap_statics/homepage.md"
-        media_folder: "../../../public/images/"  
+      - label: 'Homepage Contents'
+        name: 'homepage'
+        file: 'src/content/decap_statics/homepage.md'
+        media_folder: '../../../public/images/'
         public_folder: '/images'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
@@ -45,38 +45,43 @@ collections:
                     label: 'Link'
                     widget: 'string'
                     required: false
-          - label: "Slider Images"
-            name: "slides"
-            widget: "list"
+          - label: 'Slider Images'
+            name: 'slides'
+            widget: 'list'
             summary: '{{fields.alt}}'
             fields:
-              - label: "Image"
-                name: "src"
-                widget: "image"
+              - label: 'Image'
+                name: 'src'
+                widget: 'image'
                 choose_url: true
-              - {label: "Image short description", name: "alt", widget: "string"}
-          - label: "Images"
-            name: "images"
-            widget: "list"
+              - { label: 'Image short description', name: 'alt', widget: 'string' }
+          - label: 'Images'
+            name: 'images'
+            widget: 'list'
             fields:
-              - {label: "Image short description", name: "alt", widget: "string"}
-              - label: "Image"
-                name: "src"
-                widget: "image"
+              - { label: 'Image short description', name: 'alt', widget: 'string' }
+              - label: 'Image'
+                name: 'src'
+                widget: 'image'
                 choose_url: true
-              - {label: "Youtube Video Id", name: "videoId", widget: "string", hint: " HELPER: **`dQw4w9WgXcQ`** in https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
+              - {
+                  label: 'Youtube Video Id',
+                  name: 'videoId',
+                  widget: 'string',
+                  hint: ' HELPER: **`dQw4w9WgXcQ`** in https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                }
 
-      - label: "Clients"
-        name: "clients"
-        file: "src/content/decap_statics/clients.md"
-        media_folder: "../../../public/images/"  
+      - label: 'Clients'
+        name: 'clients'
+        file: 'src/content/decap_statics/clients.md'
+        media_folder: '../../../public/images/'
         public_folder: '/images'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Summary', name: 'summary', widget: 'string' }
-          - label: "Client List"
-            name: "clients"
-            widget: "list"
+          - label: 'Client List'
+            name: 'clients'
+            widget: 'list'
             summary: '{{fields.photo.alt}}'
             fields:
               - name: 'photo'
@@ -84,99 +89,104 @@ collections:
                 widget: 'object'
                 collapsed: true
                 fields:
-                  - label: "Image"
-                    name: "src"
-                    widget: "image"
+                  - label: 'Image'
+                    name: 'src'
+                    widget: 'image'
                     choose_url: true
-                  - {label: "Client short description", name: "alt", widget: "string"}
+                  - { label: 'Client short description', name: 'alt', widget: 'string' }
               - name: 'description'
                 label: 'Description'
                 widget: 'string'
               - name: 'externalLink'
                 label: 'External Link'
                 widget: 'string'
-              - {label: "Youtube Video Id", name: "youtubeId", widget: "string", hint: " HELPER: **`dQw4w9WgXcQ`** in https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
+              - {
+                  label: 'Youtube Video Id',
+                  name: 'youtubeId',
+                  widget: 'string',
+                  hint: ' HELPER: **`dQw4w9WgXcQ`** in https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+                }
 
   - name: 'Homepage2'
     label: 'Testing'
     folder: 'src/content/decap_statics'
     fields:
       - { label: 'String Widget', name: 'title', widget: 'string' }
-      - {label: "BOOLEAN ", name: "draft", widget: "boolean", default: true}
+      - { label: 'BOOLEAN ', name: 'draft', widget: 'boolean', default: true }
       - label: 'Code'
         name: 'code'
         widget: 'code'
       - { label: 'Color', name: 'color', widget: 'color' }
-      - label: "DATE TIME"
-        name: "start"
-        widget: "datetime"
-        default: ""
-        date_format: "DD.MM.YYYY" # e.g. 24.12.2021
-        time_format: "HH:mm" # e.g. 21:07
-        format: "LLL"
+      - label: 'DATE TIME'
+        name: 'start'
+        widget: 'datetime'
+        default: ''
+        date_format: 'DD.MM.YYYY' # e.g. 24.12.2021
+        time_format: 'HH:mm' # e.g. 21:07
+        format: 'LLL'
         picker_utc: false
-      - label: "FILE"
-        name: "manual_pdf"
-        widget: "file"
-        default: "/uploads/general-manual.pdf"
+      - label: 'FILE'
+        name: 'manual_pdf'
+        widget: 'file'
+        default: '/uploads/general-manual.pdf'
         media_library:
           config:
             multiple: true
-      - label: "IMAGE WIDGET"
-        name: "thumbnail"
-        widget: "image"
+      - label: 'IMAGE WIDGET'
+        name: 'thumbnail'
+        widget: 'image'
         choose_url: true
-        default: "/uploads/chocolate-dogecoin.jpg"
+        default: '/uploads/chocolate-dogecoin.jpg'
         media_library:
           config:
             multiple: true
-      - label: "LIST WIDGET"
-        name: "tags"
-        widget: "list"
-        default: ["news"]
-      - {label: "MAP WIDGET", name: "location", widget: "map" }
+      - label: 'LIST WIDGET'
+        name: 'tags'
+        widget: 'list'
+        default: ['news']
+      - { label: 'MAP WIDGET', name: 'location', widget: 'map' }
       - { label: 'MARKDOWN WIDGET', name: 'body', widget: 'markdown' }
-      - label: "NUMBER WIDGET"
-        name: "puppies"
-        widget: "number"
+      - label: 'NUMBER WIDGET'
+        name: 'puppies'
+        widget: 'number'
         default: 2
-        value_type: "int"
+        value_type: 'int'
         min: 1
         max: 101
         step: 2
-      - label: "OBJECT WIDGET"
-        name: "profile"
-        widget: "object"
+      - label: 'OBJECT WIDGET'
+        name: 'profile'
+        widget: 'object'
         summary: '{{fields.name}}: {{fields.birthdate}}'
         fields:
-          - {label: "Public", name: "public", widget: "boolean", default: true}
-          - {label: "Name", name: "name", widget: "string"}
-          - label: "Birthdate"
-            name: "birthdate"
-            widget: "date"
-            default: ""
-            format: "MM/DD/YYYY"
-          - label: "Address"
-            name: "address"
-            widget: "object"
+          - { label: 'Public', name: 'public', widget: 'boolean', default: true }
+          - { label: 'Name', name: 'name', widget: 'string' }
+          - label: 'Birthdate'
+            name: 'birthdate'
+            widget: 'date'
+            default: ''
+            format: 'MM/DD/YYYY'
+          - label: 'Address'
+            name: 'address'
+            widget: 'object'
             collapsed: true
-            fields: 
-              - {label: "Street Address", name: "street", widget: "string"}
-              - {label: "City", name: "city", widget: "string"}
-              - {label: "Postal Code", name: "post-code", widget: "string"}
-      - label: "RELATION WIDGET"
-        name: "author"
-        widget: "relation"
-        collection: "authors"
-        search_fields: ["name.first", "twitterHandle"]
-        value_field: "name.first"
-        display_fields: ["twitterHandle", "followerCount"]
-      - label: "SELECT WIDGET"
-        name: "align"
-        widget: "select"
-        options: ["left", "center", "right"]
-      - {label: "STRING WIDGET", name: "titlee", widget: "string"}
-      - {label: "TEXT WIDGET", name: "description", widget: "text"}
+            fields:
+              - { label: 'Street Address', name: 'street', widget: 'string' }
+              - { label: 'City', name: 'city', widget: 'string' }
+              - { label: 'Postal Code', name: 'post-code', widget: 'string' }
+      - label: 'RELATION WIDGET'
+        name: 'author'
+        widget: 'relation'
+        collection: 'authors'
+        search_fields: ['name.first', 'twitterHandle']
+        value_field: 'name.first'
+        display_fields: ['twitterHandle', 'followerCount']
+      - label: 'SELECT WIDGET'
+        name: 'align'
+        widget: 'select'
+        options: ['left', 'center', 'right']
+      - { label: 'STRING WIDGET', name: 'titlee', widget: 'string' }
+      - { label: 'TEXT WIDGET', name: 'description', widget: 'text' }
       - label: 'VARIABLE TYPE WIDGET'
         name: 'sections'
         widget: 'list'
@@ -199,8 +209,6 @@ collections:
               - { label: Header, name: header, widget: string, default: 'Spotlight' }
               - { label: Template, name: template, widget: string, default: 'spotlight.html' }
               - { label: Text, name: text, widget: text, default: 'Hello World' }
-
-
 
   - name: 'post'
     label: 'Post'

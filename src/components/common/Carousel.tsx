@@ -35,7 +35,7 @@ export default function Carousel({ slides }: { slides: SlideProp[] }) {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={`slide-${index}`}>
-            <img src={slide.src} className="h-full w-full object-cover " alt={slide.alt} />
+            <img src={slide.src} className="h-full w-full object-cover" alt={slide.alt} />
           </SwiperSlide>
         ))}
       </Swiper>

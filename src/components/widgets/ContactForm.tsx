@@ -65,13 +65,13 @@ const ContactForm: React.FC<ContactProps> = ({ title, subtitle, description }) =
 
   return (
     <>
-      <div className="mb-8 md:mx-auto md:mb-12 text-center max-w-3xl">
-        <h2 className="font-bold leading-tighter tracking-tighter font-heading text-heading text-3xl md:text-4xl">
+      <div className="mb-8 max-w-3xl text-center md:mx-auto md:mb-12">
+        <h2 className="leading-tighter text-heading font-heading text-3xl font-bold tracking-tighter md:text-4xl">
           {title}
         </h2>
-        {subtitle && <p className="mt-4 text-muted text-xl">{subtitle}</p>}
+        {subtitle && <p className="mt-4 text-xl text-muted">{subtitle}</p>}
       </div>
-      <div className="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full">
+      <div className="mx-auto flex w-full max-w-xl flex-col rounded-lg border border-gray-200 bg-white p-4 shadow backdrop-blur dark:border-gray-700 dark:bg-slate-900 sm:p-6 lg:p-8">
         <form onSubmit={handleSubmit}>
           <div className="mb-6">
             <label htmlFor="name" className="block text-sm font-medium">
@@ -84,7 +84,7 @@ const ContactForm: React.FC<ContactProps> = ({ title, subtitle, description }) =
               value={formData.name}
               onChange={handleChange}
               placeholder=""
-              className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+              className="text-md block w-full rounded-lg border border-gray-200 bg-white px-4 py-3 dark:border-gray-700 dark:bg-slate-900"
               required
             />
           </div>
@@ -99,7 +99,7 @@ const ContactForm: React.FC<ContactProps> = ({ title, subtitle, description }) =
               value={formData.email}
               onChange={handleChange}
               placeholder=""
-              className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+              className="text-md block w-full rounded-lg border border-gray-200 bg-white px-4 py-3 dark:border-gray-700 dark:bg-slate-900"
               required
             />
           </div>
@@ -114,18 +114,18 @@ const ContactForm: React.FC<ContactProps> = ({ title, subtitle, description }) =
               onChange={handleChange}
               placeholder=""
               rows={4}
-              className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+              className="text-md block w-full rounded-lg border border-gray-200 bg-white px-4 py-3 dark:border-gray-700 dark:bg-slate-900"
               required
             ></textarea>
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-600 hover:bg-blue-700 ease-in duration-150 text-white font-bold py-4 px-4 rounded-full"
+            className="w-full rounded-full bg-blue-600 px-4 py-4 font-bold text-white duration-150 ease-in hover:bg-blue-700"
           >
             {isSubmitting ? (
               <div className="flex items-center justify-center">
                 <svg
-                  className="animate-spin h-5 w-5 mr-3 "
+                  className="mr-3 h-5 w-5 animate-spin"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -142,8 +142,8 @@ const ContactForm: React.FC<ContactProps> = ({ title, subtitle, description }) =
               'Submit'
             )}
           </button>
-          {isMessageSent && <p className="text-green-400 mt-2">Message sent!</p>}
-          <div className="text-center mt-3">
+          {isMessageSent && <p className="mt-2 text-green-400">Message sent!</p>}
+          <div className="mt-3 text-center">
             {description && <p className="text-sm text-gray-600 dark:text-gray-400">{description}</p>}
           </div>
         </form>

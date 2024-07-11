@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import ProjectDetailCarousel from '~/components/common/ProjectsDetailCarousel.tsx';
 
 const metadata = {
@@ -9,7 +8,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="container my-6 sm:my-8 lg:my-12 mx-auto body-font">
+  <section class="body-font container mx-auto my-6 sm:my-8 lg:my-12">
     <div class="my-6 sm:my-8 lg:my-12">
       <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
         <!-- <p class="mb-2 font-semibold md:mb-3 lg:text-lg">Introducing</p> -->
@@ -22,6 +21,7 @@ const metadata = {
         </p>
       </div>
     </div>
+
     <ProjectDetailCarousel client:load />
   </section>
 </Layout>

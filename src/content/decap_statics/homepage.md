@@ -2,10 +2,10 @@
 title: Homepage
 cta:
   heading: Interested in working with us
-  description: " -- TODO: BETTER LAYOUT -- We are an animation studio founded by artists and filmmakers who
+  description: ' -- TODO: BETTER LAYOUT -- We are an animation studio founded by artists and filmmakers who
     believe that every creative project starts with a great idea. We bring our
     love of craft and storytelling to everything we do, from advertising and
-    interactive to music videos and original content."
+    interactive to music videos and original content.'
   button:
     text: Work with us
     link: /contact

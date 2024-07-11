@@ -131,7 +131,7 @@ let currentYear = new Date().getFullYear();
 export const footerData = {
   links: [
     {
-      title: 'Projecs',
+      title: 'Projects',
       links: [
         { text: 'Projects 1 ', href: '#' },
         { text: 'Projects 2 ', href: '#' },
@@ -140,7 +140,7 @@ export const footerData = {
       ],
     },
     {
-      title: 'Featured',
+      title: 'Featured Links',
       links: [
         { text: 'Projects 1 ', href: '#' },
         { text: 'Projects 2 ', href: '#' },
@@ -153,14 +153,16 @@ export const footerData = {
       links: [
         { text: 'About Us', href: '/about-us' },
         { text: 'Careers', href: '/careers' },
+        { text: 'Terms', href: '/terms' },
+        { text: 'Privacy Policy', href: '/privacy' },
       ],
     },
     {
       title: 'Company',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Contact Us', href: '#' },
+        { text: 'About', href: '/about' },
+        { text: 'Careers', href: '/careers' },
+        { text: 'Contact Us', href: '/contact' },
       ],
     },
   ],
@@ -172,13 +174,7 @@ export const footerData = {
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    // { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
-  /* footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
-  `, */
 
   footNote: `
   ${currentYear} All rights reserved. &copy; ${SITE.name}
