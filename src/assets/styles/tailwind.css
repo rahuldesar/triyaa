@@ -92,8 +92,9 @@
 .text-shadow-sm {
   text-shadow: 0 2px 3px #000000c7;
 }
+
 /*
-.themes-carousel .swiper-slide-active {
-  @apply border-blue-500;
-}
- */
+  .themes-carousel .swiper-slide-active {
+    @apply border-blue-500;
+  }
+*/

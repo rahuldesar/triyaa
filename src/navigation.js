@@ -4,30 +4,46 @@ import { getPermalink, getBlogPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'In House Productions',
-      links: [
-        {
-          text: 'Gaming',
-          href: getPermalink('/inhouse/gaming'),
-        },
-        {
-          text: 'Videos',
-          href: getPermalink('/inhouse/videos'),
-        },
-        {
-          text: 'Animated Series',
-          href: getPermalink('/inhouse/animated-series'),
-        },
-      ],
+      text: 'Technology',
+      href: getPermalink('/inhouse/technology'),
     },
     {
-      text: 'Our Clients',
-      href: getPermalink('/our-clients'),
+      text: 'Videos',
+      href: getPermalink('/inhouse/videos'),
     },
+    //{
+    //  text: 'In House Productions',
+    //  links: [
+    //    {
+    //      text: 'Gaming',
+    //      href: getPermalink('/inhouse/gaming'),
+    //    },
+    //    {
+    //      text: 'Videos',
+    //      href: getPermalink('/inhouse/videos'),
+    //    },
+    //    {
+    //      text: 'Animated Series',
+    //      href: getPermalink('/inhouse/animated-series'),
+    //    },
+    //  ],
+    //},
+    //{
+    //  text: 'Our Clients',
+    //  href: getPermalink('/our-clients'),
+    //},
+    //{
+    //  text: 'Products',
+    //  href: getPermalink('/products'),
+    //},
+
     {
-      text: 'Products',
-      href: getPermalink('/products'),
+      text: 'About us',
+      href: getPermalink('/about-us'),
     },
+
+    //
+    // ===@Rahul - Default pages from template =====
     // {
     //   text: 'Default Pages',
     //   links: [
@@ -131,12 +147,11 @@ let currentYear = new Date().getFullYear();
 export const footerData = {
   links: [
     {
-      title: 'Projects',
+      title: 'Socials',
       links: [
-        { text: 'Projects 1 ', href: '#' },
-        { text: 'Projects 2 ', href: '#' },
-        { text: 'Projects 3 ', href: '#' },
-        { text: 'Projects 4 ', href: '#' },
+        { text: 'Facebook', href: '#' },
+        { text: 'Twitter', href: '#' },
+        { text: 'Youtube', href: '#' },
       ],
     },
     {
@@ -166,6 +181,7 @@ export const footerData = {
       ],
     },
   ],
+
   secondaryLinks: [
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
