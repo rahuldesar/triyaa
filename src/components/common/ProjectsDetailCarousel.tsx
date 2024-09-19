@@ -6,98 +6,30 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-// TODO: @Rahul - add Project Cover/Thumbnail
-interface ProjectData {
-  id: number;
-  projectInfo: {
-    name: string;
-    image: {
-      src: string;
-    };
-    heading: string;
-    description: string;
-    video: {
-      src: string;
-    };
-  };
+export interface SimplifiedProjectData {
+  name: string;
+  heading: string;
+  thumbnailSrc: string;
+  alt: string;
+  description: string;
+  youtubeId: string;
 }
 
-let projectDetails: ProjectData[] = [
-  {
-    id: 1,
-    projectInfo: {
-      name: 'Project 1',
-      image: {
-        src: 'https://dummyimage.com/1200x500',
-      },
-      heading: '',
-      description: 'Some Sweet short description1',
-      video: {
-        src: 'dQw4w9WgXcQ',
-      },
-    },
-  },
-
-  {
-    id: 2,
-    projectInfo: {
-      name: 'Project 2',
-      image: {
-        src: 'https://dummyimage.com/1000x500',
-      },
-      heading: '',
-      description: 'Some Sweet short description2',
-      video: {
-        src: 'Sfz9jQ3KI5k',
-      },
-    },
-  },
-
-  {
-    id: 3,
-    projectInfo: {
-      name: 'Project 3',
-      image: {
-        src: 'https://dummyimage.com/800x400',
-      },
-      heading: '',
-      description: 'Some Sweet short description3',
-      video: {
-        src: 'Z5NoQg8LdDk',
-      },
-    },
-  },
-
-  {
-    id: 4,
-    projectInfo: {
-      name: 'Project 4',
-      image: {
-        src: 'https://dummyimage.com/1200x600',
-      },
-      heading: '',
-      description: 'Some Sweet short description5',
-      video: {
-        src: 'u5CVsCnxyXg',
-      },
-    },
-  },
-
-  {
-    id: 5,
-    projectInfo: {
-      name: 'Project 5',
-      image: {
-        src: 'https://dummyimage.com/1000x500',
-      },
-      heading: '',
-      description: 'Some Sweet short description5',
-      video: {
-        src: 'Sfz9jQ3KI5k',
-      },
-    },
-  },
-];
+// -- :INFO OLDER --
+//interface ProjectData {
+//  id: number;
+//  projectInfo: {
+//    name: string;
+//    image: {
+//      src: string;
+//    };
+//    heading: string;
+//    description: string;
+//    video: {
+//      src: string;
+//    };
+//  };
+//}
 
 const scrollToTargetAdjusted = (element) => {
   const headerOffset = 110;
@@ -110,7 +42,7 @@ const scrollToTargetAdjusted = (element) => {
   });
 };
 
-const ProjectsDetailCarousel = () => {
+const ProjectsDetailCarousel = ({ projectDetails }: { projectDetails: SimplifiedProjectData[] }) => {
   let [currentActiveSlideIndex, setCurrentActiveSlideIndex] = useState(0);
   let [currentProject, setCurrentProject] = useState(projectDetails[0]);
   const projectContentRef = useRef(null);
@@ -131,18 +63,18 @@ const ProjectsDetailCarousel = () => {
                 <img
                   alt="project-thumbnail"
                   className="h-full w-full object-cover object-center"
-                  src={currentProject.projectInfo.image.src}
+                  src={currentProject.thumbnailSrc}
                 />
               </div>
               <div className="mt-4 border-t border-gray-200 pt-4 text-center sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left">
-                <p className="mb-4 text-lg leading-relaxed">{currentProject.projectInfo.description}</p>
+                <p className="mb-4 text-lg leading-relaxed">{currentProject.description}</p>
               </div>
             </div>
             <div className="my-8 h-96 overflow-hidden rounded-lg">
               <div className="relative h-full w-full">
                 <iframe
                   className="absolute left-0 top-0 h-full w-full"
-                  src={`https://www.youtube.com/embed/${currentProject.projectInfo.video.src}`}
+                  src={`https://www.youtube.com/embed/${currentProject.youtubeId}`}
                   title="YouTube Embed Video"
                   allowFullScreen
                 ></iframe>
@@ -183,13 +115,9 @@ const ProjectsDetailCarousel = () => {
         {projectDetails.map((item, index) => (
           <SwiperSlide
             className={`h-[11.625rem] overflow-hidden ${index === currentActiveSlideIndex ? 'border-4 border-accent' : 'border-2 border-slate-200'}`}
-            key={`thumb-${item.projectInfo.image.src}-${index}`}
+            key={`thumb-${item.thumbnailSrc}-${index}`}
           >
-            <img
-              src={item.projectInfo.image.src}
-              alt={item.projectInfo.image.src}
-              className="h-full w-full object-cover"
-            />
+            <img src={item.thumbnailSrc} alt={item.thumbnailSrc} className="h-full w-full object-cover" />
           </SwiperSlide>
         ))}
       </Swiper>

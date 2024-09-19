@@ -1,6 +1,12 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import ProjectDetailCarousel from '~/components/common/ProjectsDetailCarousel.tsx';
+import ProjectDetailCarousel, { type SimplifiedProjectData } from '~/components/common/ProjectsDetailCarousel.tsx';
+
+import * as videoPageData from '~/content/decap_statics/videos-page.md';
+
+let projectDetails = videoPageData.frontmatter.content as SimplifiedProjectData[];
+let pageTitle = videoPageData.frontmatter.title;
+let pageDescription = videoPageData.frontmatter.summary;
 
 const metadata = {
   title: 'Videos',
@@ -13,15 +19,11 @@ const metadata = {
       <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
         <!-- <p class="mb-2 font-semibold md:mb-3 lg:text-lg">Introducing</p> -->
 
-        <h2 class="mb-4 text-2xl font-bold md:mb-6 lg:text-3xl">Videos</h2>
-
-        <p class="max-w-screen-md md:text-lg">
-          This is a section of some simple filler text, also known as placeholder text. It shares some characteristics
-          of a real written text but is random or otherwise generated.
-        </p>
+        <h2 class="mb-4 text-2xl font-bold md:mb-6 lg:text-3xl">{pageTitle}</h2>
+        <p class="max-w-screen-md md:text-lg">{pageDescription}</p>
       </div>
     </div>
 
-    <ProjectDetailCarousel client:load />
+    {projectDetails.length ? <ProjectDetailCarousel client:load projectDetails={projectDetails} /> : null}
   </section>
 </Layout>
