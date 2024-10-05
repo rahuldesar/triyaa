@@ -1,6 +1,7 @@
 backend:
   name: gitlab
   repo: triaa-studio/triaa-studio
+  branch: main
   # when changing this remember to add Oauth credentials on netlify
 local_backend:
   url: http://localhost:8081/api/v1
