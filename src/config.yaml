@@ -1,6 +1,6 @@
 site:
-  name: Triyaa
-  site: 'https://preview.rahuldeshar.com.np'
+  name: Triaa
+  site: 'https://triaatech.com'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Triyaa Tantric Animation Studios
-    template: '%s | Triyaa Tantric Animation Studios'
-  description: 'Specializing in 3D character animation, visual effects for feature films and television, game cinematics, trailers, commercials, and documentaries, Triyaa Tantric Animation Studios brings imagination to life with dedication to creativity and innovation.'
+    default: Triaa Tantric Animation Studios
+    template: '%s | Triaa Tantric Animation Studios'
+  description: 'Specializing in 3D character animation, visual effects for feature films and television, game cinematics, trailers, commercials, and documentaries, Triaa Tantric Animation Studios brings imagination to life with dedication to creativity and innovation.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Triyaa Tantric Animation Studios
+    site_name: Triaa Tantric Animation Studios
     images:
       - url: '~/assets/images/og-image-v2.png'
         width: 1200

@@ -248,7 +248,7 @@ export async function POST({ request }) {
                     align="center"
                   >
                     <span class="apple-link" style="color: #9a9ea6; font-size: 16px; text-align: center; padding-bottom: 2rem"
-                      >Triyaa Animation Studios</span
+                      >Triaa Animation Studios</span
                     >
                   </td>
                 </tr>
