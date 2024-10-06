@@ -108,6 +108,7 @@ collections:
             name: 'content'
             widget: 'list'
             summary: '{{fields.alt}}'
+            min: 3
             fields:
               - { label: 'Description', name: 'description', widget: 'string' }
               - { label: 'Image alt', name: 'alt', widget: 'string' }
@@ -134,6 +135,7 @@ collections:
             name: 'content'
             widget: 'list'
             summary: '{{fields.alt}}'
+            min: 3
             fields:
               - { label: 'Description', name: 'description', widget: 'string' }
               - { label: 'Image alt', name: 'alt', widget: 'string' }
@@ -188,3 +190,42 @@ collections:
                 fields:
                   - { label: 'Goal Title', name: 'title', widget: 'string' }
                   - { label: 'Description', name: 'description', widget: 'text' }
+      - label: 'Contact'
+        name: 'contact-us'
+        file: 'src/content/decap_statics/contact.md'
+        media_folder: '../../../public/images/contact'
+        public_folder: '/images/contact'
+        fields:
+          - { label: 'Contact Tagline', name: 'tagline', widget: 'string' }
+          - { label: 'Contact Title', name: 'title', widget: 'string' }
+          - name: 'contactForm'
+            label: 'Contact Form'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - name: 'heading'
+                label: 'Heading'
+                widget: 'string'
+              - name: 'subtitle'
+                label: 'Subtitle'
+                widget: 'text'
+              - name: 'description'
+                label: 'Description'
+                widget: 'string'
+          - name: 'infoSection'
+            label: 'Contact Information Section'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - name: 'heading'
+                label: 'Heading'
+                widget: 'string'
+              - label: 'Info List'
+                name: 'infoList'
+                widget: 'list'
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: 'Info Title', name: 'title', widget: 'string' }
+                  - { label: 'Description', name: 'description', widget: 'text' }
+                  - { label: 'Tabler Icon', name: 'icon', widget: 'string', hint: ' Leave blank if not needed, search icon names here: https://tablericons.com/. If icon name is _map-pin_ write **tabler:map-pin** ', required: false}
+

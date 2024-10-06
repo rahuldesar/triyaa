@@ -4,21 +4,28 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import ContactForm from '~/components/widgets/ContactForm.tsx';
 import Features2 from '~/components/widgets/Features2.astro';
 
+import * as contactPageData from '~/content/decap_statics/contact.md';
+
 const metadata = {
   title: 'Contact',
 };
+
+let pageTitle = contactPageData.frontmatter.title;
+let pageTagline = contactPageData.frontmatter.tagline;
+let contactFormData = contactPageData.frontmatter.contactForm;
+let infoSectionData = contactPageData.frontmatter.infoSection;
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline={pageTagline} title={pageTitle} />
 
   <ContactForm
     client:load
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    description="Our support team typically responds within 24 business hours."
+    title={contactFormData.heading}
+    subtitle={contactFormData.subtitle}
+    description={contactFormData.description}
   />
 
   <!-- <ContactUs -->
@@ -48,38 +55,5 @@ const metadata = {
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
-    title="We are here to help!"
-    items={[
-      {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
-      },
-    ]}
-  />
+  <Features2 title={infoSectionData.heading} items={infoSectionData.infoList} />
 </Layout>
