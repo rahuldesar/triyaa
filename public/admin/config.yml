@@ -147,3 +147,44 @@ collections:
                   widget: 'string',
                   hint: ' HELPER: **`dQw4w9WgXcQ`** in https://www.youtube.com/watch?v=dQw4w9WgXcQ',
                 }
+      - label: 'About Us'
+        name: 'about-us'
+        file: 'src/content/decap_statics/about-us.md'
+        media_folder: '../../../public/images/about-us'
+        public_folder: '/images/about-us'
+        fields:
+          - { label: 'Hero Title', name: 'title', widget: 'string' }
+          - { label: 'Hero Subtitle', name: 'description', widget: 'text' }
+          - name: 'goals'
+            label: 'Goals'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - name: 'heading'
+                label: 'Heading'
+                widget: 'string'
+              - name: 'description'
+                label: 'Description'
+                widget: 'text'
+              - label: 'Goals List'
+                name: 'goalList'
+                widget: 'list'
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: 'Goal Title', name: 'title', widget: 'string' }
+                  - { label: 'Description', name: 'description', widget: 'text' }
+          - name: 'faqs'
+            label: 'FAQS'
+            widget: 'object'
+            collapsed: true
+            fields:
+              - name: 'heading'
+                label: 'Heading'
+                widget: 'string'
+              - label: 'Faq List'
+                name: 'faqList'
+                widget: 'list'
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: 'Goal Title', name: 'title', widget: 'string' }
+                  - { label: 'Description', name: 'description', widget: 'text' }
